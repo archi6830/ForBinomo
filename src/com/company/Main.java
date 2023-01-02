@@ -30,6 +30,7 @@ public class Main {
         int plus;
         int balanceend;
         int minBalance;
+        int win=0;
             stavka=balance/5;
             balanceend=balance;
             minBalance=stavka*4;
@@ -60,15 +61,21 @@ public class Main {
 
 
                 }
+
         System.out.println(" ");
       System.out.println("Your Deposit was ="+ " " + balance+valute);
         System.out.println(" ");
 
         System.out.println("Your Deposit now ="+ " " + balanceend+valute);
         System.out.println(" ");
-
-        System.out.print("Yor win:"+ " " + (balanceend-balance)+valute);
-        System.out.println(" ");
+        win=balance-balanceend;
+        if (win<0){
+            win=win*(-1);
+            System.out.print("Yor Winn:"+ " " + win + " " +valute);
+        }else {
+            System.out.print("Yor loss:" + " " + win + " " + valute);
+            System.out.println(" ");
+        }
 
     }
 
