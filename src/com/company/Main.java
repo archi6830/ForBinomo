@@ -34,6 +34,7 @@ public class Main {
             stavka=balance/5;
             balanceend=balance;
             minBalance=stavka*4;
+            win=balance-balanceend;
                 for ( int i=0; i<5; i++) {
                     System.out.println(" ");
                     System.out.println("print 1 if you win and two if you loss:" + " ");
@@ -53,7 +54,7 @@ public class Main {
                         }
                             if (balanceend<minBalance-1){
                                 System.out.println(" ");
-                                System.out.println(" Oh no You loss" + " " + (balance-balanceend)+valute);
+                                System.out.println(" Oh no You loss" + " " + win+valute);
                                 break;
                             }
 
@@ -68,7 +69,7 @@ public class Main {
 
         System.out.println("Your Deposit now ="+ " " + balanceend+valute);
         System.out.println(" ");
-        win=balance-balanceend;
+
         if (win<0){
             win=win*(-1);
             System.out.print("Yor Winn:"+ " " + win + " " +valute);
